@@ -1,0 +1,11 @@
+.app__footer {
+	&-text {
+		font-size: 0.875rem;
+		font-style: italic;
+		text-align: right;
+		letter-spacing: 1px;
+		span {
+			text-transform: uppercase;
+		}
+	}
+}

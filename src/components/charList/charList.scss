@@ -1,0 +1,45 @@
+@import "../../style/variables.scss";
+
+.char-list {
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, 15.625rem);
+		grid-template-rows: repeat(2, minmax(30.5625rem, auto));
+		grid-auto-rows: minmax(30.5625rem, auto);
+		grid-gap: 1.25rem;
+	}
+	&__item {
+		border: 1px solid $main-color;
+		border-radius: 0.625rem;
+		&-link {
+			display: flex;
+			flex-direction: column;
+		}
+		&-image {
+			max-width: 100%;
+			height: 26.25rem;
+			object-fit: cover;
+			border-radius: 0.625rem 0.625rem 0 0;
+		}
+		&-name {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 4.125rem;
+			padding: 0.625rem;
+			font-size: 1.25rem;
+			text-align: center;
+			color: $main-color;
+			letter-spacing: 2px;
+		}
+		&-active {
+			box-shadow: 0 0 0.5rem 5px $orange;
+			border: none;
+			border-radius: 0.625rem;
+			.char-list__item-name {
+				color: $orange;
+			}
+		}
+	}
+}

@@ -1,0 +1,54 @@
+@import "../../../style/variables.scss";
+
+.episodes {
+	background: #000;
+	&__title {
+		color: $orange;
+		font-size: 1.375rem;
+		font-weight: 700;
+		text-align: left;
+		margin-bottom: 1.875rem;
+		letter-spacing: 2px;
+	}
+	&__wrap {
+		display: grid;
+		grid-template-columns: repeat(5, 18.125rem);
+		grid-template-rows: repeat(2, 1fr);
+		grid-auto-rows: 1fr;
+		grid-gap: 1.25rem;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 2;
+	}
+	&__item {
+		position: relative;
+		width: 18.125rem;
+		height: 100%;
+		padding: 0.9375rem;
+		border: 1px solid $main-color;
+		border-radius: 0.625rem;
+		&-title,
+		&-season,
+		&-data,
+		&-characters,
+		&-episode,
+		&-series {
+			font-weight: 700;
+			line-height: 1.5;
+			letter-spacing: 2px;
+			color: $orange;
+			margin-bottom: 0.9375rem;
+		}
+		&-title span,
+		&-season span,
+		&-data span,
+		&-characters span,
+		&-episode span,
+		&-series span {
+			font-weight: 500;
+			color: $main-color;
+			text-transform: uppercase;
+			letter-spacing: 0;
+		}
+	}
+}

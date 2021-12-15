@@ -1,0 +1,63 @@
+@import "../../style/variables.scss";
+
+.app__header {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.9375rem 1.875rem;
+	border-radius: 0.625rem;
+	&-logo {
+		a {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 26.875rem;
+			color: $main-color;
+		}
+	}
+	&-image {
+		width: 9.375rem;
+		height: 9.375rem;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&-title {
+		font-size: 1.25rem;
+		text-align: center;
+		span {
+			font-size: 1.875rem;
+			line-height: 2.625rem;
+			font-weight: 700;
+			letter-spacing: 2.5px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.app__menu {
+	width: 18.75rem;
+	ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		li {
+			a {
+				font-size: 1.25rem;
+				font-weight: 700;
+				text-align: center;
+				color: $main-color;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				transition: 0.3s all;
+				&:hover {
+					border-bottom: 3px solid #fff;
+					padding-bottom: 5px;
+				}
+			}
+		}
+	}
+}

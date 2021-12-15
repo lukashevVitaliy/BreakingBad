@@ -1,0 +1,95 @@
+@import "../../style//variables.scss";
+
+.random-char {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: minmax(20.3125rem, auto);
+	grid-gap: 1.875rem;
+	justify-content: space-between;
+	align-items: center;
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		padding: 1.25rem;
+		border: 1px solid white;
+		border-radius: 0.625rem;
+	}
+	&__image {
+		width: 12.5rem;
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__desc {
+		width: 34.375rem;
+		font-size: 1.25rem;
+		color: $orange;
+		&-info {
+			color: $orange;
+			font-size: 1.375rem;
+			font-weight: 700;
+			text-align: center;
+			margin-bottom: 1.5625rem;
+			letter-spacing: 2px;
+		}
+		&-name span,
+		&-birthday span,
+		&-occupation span {
+			font-weight: 500;
+			color: $main-color;
+			text-transform: uppercase;
+			letter-spacing: 0;
+		}
+		&-name,
+		&-birthday,
+		&-occupation {
+			font-weight: 700;
+			line-height: 1.5;
+			letter-spacing: 2px;
+			margin-bottom: 0.9375rem;
+		}
+	}
+	&__choice {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 1.25rem;
+		border: 1px solid $main-color;
+		border-radius: 0.625rem;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-image: url(../../resources//bg/bg-random.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 0.625rem;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+
+		&-desc {
+			color: $orange;
+			font-size: 1.375rem;
+			font-weight: 700;
+			line-height: 1.5;
+			letter-spacing: 2px;
+			text-align: center;
+			p {
+				margin-top: 1.5625rem;
+			}
+		}
+	}
+}

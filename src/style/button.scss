@@ -1,0 +1,31 @@
+@import "./variables.scss";
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 9.375rem;
+	height: 2.5rem;
+	background-color: $orange;
+	font-size: 1.125rem;
+	font-weight: 700;
+	color: $main-color;
+	letter-spacing: 2px;
+	border-radius: 5px;
+	&__rch,
+	&__cl,
+	&__el {
+		margin: 3.75rem auto 0;
+	}
+	&__rq {
+		margin: 1.5625rem auto 0;
+	}
+
+	&__cl:disabled,
+	&__el:disabled {
+		filter: grayscale(0.5);
+	}
+	&__sv {
+		background: #00bfff;
+	}
+}

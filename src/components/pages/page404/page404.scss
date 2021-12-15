@@ -1,0 +1,35 @@
+@import "../../../style/variables.scss";
+
+.page404 {
+	position: relative;
+	display: block;
+	background: url(../../../resources/bg/bg_404.jpg) center/cover no-repeat;
+	width: 100%;
+	min-height: 50rem;
+	&__box {
+		position: absolute;
+		top: 15.625rem;
+		left: 12.5rem;
+		width: 25rem;
+		min-height: 12.5rem;
+	}
+
+	&__title {
+		font-size: 3.75rem;
+		font-weight: 700;
+		line-height: 1.5;
+		letter-spacing: 2px;
+		color: $main-color;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 3.125rem;
+	}
+	&__link {
+		display: block;
+		font-size: 1.875rem;
+		font-weight: 700;
+		letter-spacing: 2px;
+		color: $orange;
+		text-align: center;
+	}
+}

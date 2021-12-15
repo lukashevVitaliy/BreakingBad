@@ -1,0 +1,39 @@
+@import "./reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap");
+@import "./variables.scss";
+@import "./button.scss";
+
+html,
+body {
+	font-size: 1rem;
+	line-height: 1.4375rem;
+	font-weight: 400;
+	// height: 100%;
+}
+
+body {
+	font-family: "Roboto Condensed", sans-serif;
+	color: $main-color;
+	background: #000;
+	overflow-x: hidden;
+	min-width: 20rem;
+}
+
+.app {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	max-width: 103.75rem;
+	min-height: 100%;
+	margin: 1.5625rem auto 0;
+	padding: 0 0.9375rem;
+}
+
+main {
+	flex: 1 0 auto;
+	margin-top: 3.75rem;
+}
+footer {
+	flex: 0 0 auto;
+	margin-top: 2.5rem;
+}

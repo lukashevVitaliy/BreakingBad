@@ -1,0 +1,8 @@
+.characters__wrapper {
+	padding-top: 3.75rem;
+	display: grid;
+	grid-template-columns: 66.25rem 34.375rem;
+	grid-template-rows: 1fr;
+	grid-auto-rows: 1fr;
+	justify-content: space-between;
+}

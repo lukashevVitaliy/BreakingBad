@@ -1,0 +1,9 @@
+.error-mesage {
+	width: 18.75rem;
+	height: 100%;
+	margin: 0 auto;
+	&__img {
+		width: 100%;
+		object-fit: cover;
+	}
+}
