@@ -12,11 +12,11 @@ const RandomQuotes = () => {
 	useEffect(() => {
 		updateQuote();
 
-		const timerId = setInterval(updateQuote, 61000);
+		// const timerId = setInterval(updateQuote, 61000);
 
-		return () => {
-			clearInterval(timerId);
-		}
+		// return () => {
+		// 	clearInterval(timerId);
+		// }
 	}, [])
 
 	const updateQuote = () => {

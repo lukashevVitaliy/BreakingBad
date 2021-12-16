@@ -26,7 +26,7 @@ const CharactersPage = () => {
 				<ErrorBoundaries>
 					<CharList />
 				</ErrorBoundaries>
-				<div>
+				<div className="characters__inner">
 					<ErrorBoundaries>
 						<CharSearchForm />
 					</ErrorBoundaries>

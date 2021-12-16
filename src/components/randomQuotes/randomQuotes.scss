@@ -1,6 +1,8 @@
 @import "../../style/variables.scss";
+@import "../../style/_breakpoints.scss";
 
 .random-quotes {
+	margin-top: 5.3125rem;
 	padding: 1.25rem;
 	border: 1px solid $main-color;
 	border-radius: 0.625rem;
@@ -26,6 +28,25 @@
 		span {
 			font-weight: 700;
 			color: $orange;
+		}
+	}
+}
+
+//* Desktop first
+
+@include xl-d {
+	.random-quotes {
+		margin-top: 0;
+	}
+}
+@include sm-d {
+	.random-quotes {
+		&__title {
+			font-size: 1.125rem;
+		}
+		&__quote,
+		&__info {
+			font-size: 1rem;
 		}
 	}
 }

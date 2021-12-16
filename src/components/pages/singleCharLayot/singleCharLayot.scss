@@ -1,19 +1,14 @@
 @import "../../../style/variables.scss";
+@import "../../../style/_breakpoints.scss";
 
 .single-char {
 	display: grid;
-	grid-template-columns: 18.125rem 1fr;
-	grid-template-rows: 1fr;
-	grid-auto-rows: 1fr;
-	grid-gap: 3.125rem;
-	border: 1px solid $orange;
+	grid-template: 1fr / 18.125rem 1fr;
+	grid-auto-rows: auto;
+	gap: 3.125rem;
 	border-radius: 0.625rem;
-	width: 75rem;
 	padding: 1.875rem;
-	margin: 0 auto;
 	&__image {
-		width: 18.125rem;
-		height: 100%;
 		&-img {
 			width: 100%;
 			height: 100%;
@@ -39,6 +34,7 @@
 		&-portrayed,
 		&-category,
 		&-better {
+			font-size: 1.25rem;
 			font-weight: 700;
 			line-height: 1.5;
 			letter-spacing: 2px;
@@ -58,6 +54,44 @@
 			color: $main-color;
 			text-transform: uppercase;
 			letter-spacing: 0;
+		}
+	}
+}
+
+//* Desktop first
+
+@include sm-d {
+	.single-char {
+		grid-template-columns: 1fr;
+		padding: 0;
+		&__desc {
+			&-title {
+				font-size: 1.125rem;
+				text-align: center;
+				text-transform: uppercase;
+			}
+			&-name,
+			&-birtday,
+			&-occupation,
+			&-status,
+			&-nickname,
+			&-appearance,
+			&-portrayed,
+			&-category,
+			&-better {
+				font-size: 1.125rem;
+			}
+			&-name span,
+			&-birtday span,
+			&-occupation span,
+			&-status span,
+			&-nickname span,
+			&-appearance span,
+			&-portrayed span,
+			&-category span,
+			&-better span {
+				font-size: 1rem;
+			}
 		}
 	}
 }

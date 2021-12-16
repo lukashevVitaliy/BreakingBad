@@ -10,11 +10,11 @@ const RandomChar = () => {
 
 	useEffect(() => {
 		updateChar();
-		const timerId = setInterval(updateChar, 60000);
+		// const timerId = setInterval(updateChar, 60000);
 
-		return () => {
-			clearInterval(timerId);
-		}
+		// return () => {
+		// 	clearInterval(timerId);
+		// }
 	}, [])
 
 	const updateChar = () => {
@@ -59,11 +59,11 @@ const View = ({ data }) => {
 			<div className="random-char__desc">
 				<p className="random-char__desc-info">Сharacters information:</p>
 				<p className="random-char__desc-name">name:
-					<span> {name}</span></p>
+					<span> <br />{name}</span></p>
 				<p className="random-char__desc-birthday">birthday:
-					<span> {birthday}</span></p>
+					<span> <br />{birthday}</span></p>
 				<p className="random-char__desc-occupation">occupation:
-					<span> {occupation}</span>
+					<span> <br />{occupation}</span>
 				</p>
 			</div>
 		</div>

@@ -1,4 +1,5 @@
 @import "../../style/variables.scss";
+@import "../../style/_breakpoints.scss";
 
 .app__header {
 	position: relative;
@@ -57,6 +58,53 @@
 					border-bottom: 3px solid #fff;
 					padding-bottom: 5px;
 				}
+			}
+		}
+	}
+}
+
+//* Desktop first
+
+@include md-d {
+	.app__header {
+		&-logo a {
+			width: 20rem;
+		}
+		&-image {
+			width: 7.375rem;
+			height: 7.375rem;
+		}
+		&-title {
+			font-size: 1.125rem;
+			span {
+				font-size: 1.5625rem;
+			}
+		}
+	}
+	.app__menu ul li a {
+		font-size: 1rem;
+	}
+}
+
+@include sm-d {
+	.app__header {
+		padding: 0;
+		&-logo a {
+			width: 16.875rem;
+		}
+		&-image {
+			width: 5.375rem;
+			height: 5.375rem;
+		}
+		&-title {
+			font-size: 1rem;
+			span {
+				font-size: 1.375rem;
+			}
+		}
+		.app__menu {
+			ul {
+				display: none;
 			}
 		}
 	}

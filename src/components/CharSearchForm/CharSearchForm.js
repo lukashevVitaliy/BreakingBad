@@ -6,6 +6,7 @@ import useBreakingBadService from '../../services/BreakingBadService';
 import ErrorMessage from '../errorMessage';
 
 import './charSearchForm.scss';
+import searchIcon from '../../resources/icons/searchsymbol.png';
 
 const CharSearchForm = () => {
 	const [char, setChar] = useState(null);
@@ -59,7 +60,7 @@ const CharSearchForm = () => {
 							type="submit"
 							className="btn btn__csn"
 							disabled={loading}
-						>Search</button>
+						> <img src={searchIcon} alt="icon search"></img> </button>
 					</div>
 					<FormikErrorMessage component='div' className='char__search-error' name='charName' />
 				</Form>

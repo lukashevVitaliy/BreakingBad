@@ -1,14 +1,16 @@
 @import "../../style/variables.scss";
+@import "../../style/_breakpoints.scss";
 
 .char-list {
 	&__list {
 		display: grid;
-		grid-template-columns: repeat(4, 15.625rem);
-		grid-template-rows: repeat(2, minmax(30.5625rem, auto));
+		grid-template: repeat(2, minmax(30.5625rem, auto)) / repeat(auto-fit, 15.625rem);
 		grid-auto-rows: minmax(30.5625rem, auto);
-		grid-gap: 1.25rem;
+		gap: 1.25rem;
+		justify-content: space-between;
 	}
 	&__item {
+		width: 100%;
 		border: 1px solid $main-color;
 		border-radius: 0.625rem;
 		&-link {
@@ -40,6 +42,26 @@
 			.char-list__item-name {
 				color: $orange;
 			}
+		}
+	}
+}
+
+//* Desktop first
+
+@include sm-d {
+	.char-list {
+		&__list {
+			grid-template-columns: 1fr;
+			justify-content: center;
+		}
+		&__item {
+			width: 15.625rem;
+			margin: 0 auto;
+		}
+	}
+	.btn {
+		&__cl {
+			margin: 1.875rem auto 0;
 		}
 	}
 }

@@ -52,15 +52,15 @@ const View = ({ data }) => {
 			</div>
 			<div className="single-char__desc">
 				<h2 className="single-char__desc-title">Detailed information about the character</h2>
-				<p className="single-char__desc-name">name: <span>{name}</span></p>
-				<p className="single-char__desc-birtday">birthday: <span>{birtday}</span></p>
-				<p className="single-char__desc-occupation">occupation: <span>{occupation}</span></p>
-				<p className="single-char__desc-status">status: <span>{status}</span></p>
-				<p className="single-char__desc-nickname">nickname: <span>{nickname}</span></p>
-				<p className="single-char__desc-appearance">appearance: <span>{appearance}</span></p>
-				<p className="single-char__desc-portrayed">portrayed: <span>{portrayed}</span></p>
-				<p className="single-char__desc-category">category: <span>{category}</span></p>
-				<p className="single-char__desc-better">better call saul appearance: <span>{better_call_saul_appearance}</span></p>
+				<p className="single-char__desc-name">name:<br /> <span>{name}</span></p>
+				<p className="single-char__desc-birtday">birthday:<br /> <span>{birtday}</span></p>
+				<p className="single-char__desc-occupation">occupation:<br /> <span>{occupation}</span></p>
+				<p className="single-char__desc-status">status:<br /> <span>{status}</span></p>
+				<p className="single-char__desc-nickname">nickname:<br /> <span>{nickname}</span></p>
+				<p className="single-char__desc-appearance">appearance:<br /> <span>{appearance}</span></p>
+				<p className="single-char__desc-portrayed">portrayed:<br /> <span>{portrayed}</span></p>
+				<p className="single-char__desc-category">category:<br /> <span>{category}</span></p>
+				<p className="single-char__desc-better">better call saul appearance:<br /> <span>{better_call_saul_appearance}</span></p>
 			</div>
 		</>
 	)

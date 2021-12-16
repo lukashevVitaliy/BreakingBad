@@ -1,10 +1,11 @@
-@import "../../style//variables.scss";
+@import "../../style/variables.scss";
+@import "../../style/_breakpoints.scss";
 
 .random-char {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: minmax(20.3125rem, auto);
-	grid-gap: 1.875rem;
+	grid-template: minmax(20.3125rem, auto) / repeat(2, minmax(48%, auto));
+	grid-auto-rows: minmax(20.3125rem, auto);
+	gap: 1.875rem;
 	justify-content: space-between;
 	align-items: center;
 
@@ -21,6 +22,7 @@
 	&__image {
 		width: 12.5rem;
 		height: 100%;
+		margin-right: 20px;
 		img {
 			width: 100%;
 			height: 100%;
@@ -28,7 +30,7 @@
 		}
 	}
 	&__desc {
-		width: 34.375rem;
+		width: 70%;
 		font-size: 1.25rem;
 		color: $orange;
 		&-info {
@@ -89,6 +91,41 @@
 			text-align: center;
 			p {
 				margin-top: 1.5625rem;
+			}
+		}
+	}
+}
+
+//* Desktop first
+
+@include lg-d {
+	.random-char {
+		&__desc {
+			font-size: 1.1875rem;
+			&-info {
+				font-size: 1.3125rem;
+			}
+		}
+		&__choice {
+			&-desc {
+				font-size: 1.3125rem;
+			}
+		}
+	}
+}
+@include md-d {
+	.random-char {
+		grid-template-columns: repeat(1, 100%);
+		justify-content: space-around;
+		&__desc {
+			font-size: 1rem;
+			&-info {
+				font-size: 1.125rem;
+			}
+		}
+		&__choice {
+			&-desc {
+				font-size: 1rem;
 			}
 		}
 	}

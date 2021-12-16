@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
+import BurgerMenu from '../burgerMenu';
 
 import './appHeader.scss';
 import logo from '../../resources/img/logo.png';
@@ -6,6 +7,7 @@ import logo from '../../resources/img/logo.png';
 const AppHeader = () => {
 	return (
 		<header className="app__header">
+			<BurgerMenu />
 			<div className="app__header-logo">
 				<Link to='/'>
 					<div className="app__header-image">

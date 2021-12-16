@@ -12,11 +12,10 @@
 	}
 	&__wrap {
 		display: grid;
-		grid-template-columns: repeat(5, 18.125rem);
-		grid-template-rows: repeat(2, 1fr);
+		grid-template: repeat(2, 1fr) / repeat(auto-fit, 18.125rem);
 		grid-auto-rows: 1fr;
-		grid-gap: 1.25rem;
-		justify-content: space-between;
+		gap: 1.25rem;
+		justify-content: space-around;
 		align-items: center;
 		z-index: 2;
 	}
