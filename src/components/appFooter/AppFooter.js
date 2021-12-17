@@ -1,13 +1,14 @@
+import { Link } from 'react-router-dom';
 import './appfooter.scss';
 
 const AppFooter = () => {
 	return (
 		<footer className="app__footer">
-			<p className="app__footer-text">
+			<p>
 				Front-end developer:<br />
 				<span>Lukashev Vitaly</span>
 			</p>
-		</footer>
+		</footer >
 	)
 }
 

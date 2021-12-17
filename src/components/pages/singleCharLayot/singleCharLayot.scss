@@ -3,7 +3,7 @@
 
 .single-char {
 	display: grid;
-	grid-template: 1fr / 18.125rem 1fr;
+	grid-template: 1fr / 1fr 1fr;
 	grid-auto-rows: auto;
 	gap: 3.125rem;
 	border-radius: 0.625rem;
@@ -17,11 +17,14 @@
 		}
 	}
 	&__desc {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		&-title {
 			color: $orange;
 			font-size: 1.375rem;
 			font-weight: 700;
-			text-align: left;
+			text-align: center;
 			margin-bottom: 1.875rem;
 			letter-spacing: 2px;
 		}
@@ -39,6 +42,7 @@
 			line-height: 1.5;
 			letter-spacing: 2px;
 			color: $orange;
+			text-align: center;
 			margin-bottom: 0.9375rem;
 		}
 		&-name span,
@@ -54,20 +58,20 @@
 			color: $main-color;
 			text-transform: uppercase;
 			letter-spacing: 0;
+			text-align: center;
 		}
 	}
 }
 
 //* Desktop first
 
-@include sm-d {
+@include md-d {
 	.single-char {
 		grid-template-columns: 1fr;
 		padding: 0;
 		&__desc {
 			&-title {
 				font-size: 1.125rem;
-				text-align: center;
 				text-transform: uppercase;
 			}
 			&-name,
